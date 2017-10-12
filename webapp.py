@@ -23,5 +23,15 @@ def render_response():
     re = float(request.args['feet'])
     return render_template('response.html', result = re * 0.3)
 
+@app.route("/response1")
+def render_response1():
+    re = float(request.args['weight'])
+    return render_template('response1.html', result = re * 0.5)
+
+@app.route("/response2")
+def render_response2():
+    re = float(request.args['speed'])
+    return render_template('response2.html', result = re * 0.8)
+
 if __name__=="__main__":
     app.run(debug=False, port=54321)
