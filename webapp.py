@@ -21,7 +21,10 @@ def render_page3():
 @app.route("/response")
 def render_response():
     re = float(request.args['feet'])
-    return render_template('response.html', result = round(re*0.3048,2))
+    if re == nil:
+        return render_template('response.html', result = 0)
+    else:
+        return render_template('response.html', result = round(re*0.3048,2))
 
 @app.route("/response1")
 def render_response1():
