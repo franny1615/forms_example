@@ -18,5 +18,11 @@ def render_page2():
 def render_page3():
     return render_template('conversion3.html')
 
+@app.route("/response")
+def render_response():
+    result = request.args['result']
+    reply = 5 * 5
+    return render_template('response.html', result = reply)
+
 if __name__=="__main__":
     app.run(debug=False, port=54321)
