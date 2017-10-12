@@ -20,8 +20,8 @@ def render_page3():
 
 @app.route("/response")
 def render_response():
-    result = request.args['result']
-    reply = 5 * 5
+    re = request.args['feet']
+    reply = re * 5
     return render_template('response.html', result = reply)
 
 if __name__=="__main__":
