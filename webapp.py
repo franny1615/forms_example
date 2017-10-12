@@ -21,7 +21,7 @@ def render_page3():
 @app.route("/response")
 def render_response():
     re = float(request.args['feet'])
-    return render_template('response.html', result = re * 0.3048)
+    return render_template('response.html', result = ((re*0.3048)/100)*100)
 
 @app.route("/response1")
 def render_response1():
