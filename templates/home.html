@@ -3,5 +3,32 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <p>some stuff</p>
+    <table>
+        <tr>
+            <td>  
+                <form action='/response'>
+                    Enter Feet:<br>
+                    <input type="text" name="feet">
+                    <br><br>
+                    <input type="submit" class="btn">
+                </form>
+            </td>
+            <td>  
+                <form action='/response'>
+                    Enter Weight(lbs):<br>
+                    <input type="text" name="weight">
+                    <br><br>
+                    <input type="submit" class="btn">
+                </form>
+            </td>
+            <td>  
+                <form action='/response'>
+                    Enter Speed(MPH):<br>
+                    <input type="text" name="speed">
+                    <br><br>
+                    <input type="submit" class="btn">
+                </form>
+            </td>
+        </tr>
+    </table>
 {% endblock %}
