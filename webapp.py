@@ -26,12 +26,12 @@ def render_response():
 @app.route("/response1")
 def render_response1():
     re1 = float(request.args['weight']):
-    return render_template('response1.html', result1 = re * 0.453592)
+    return render_template('response1.html', result1 = re1 * 0.453592)
 
 @app.route("/response2")
 def render_response2():
     re2 = float(request.args['speed']):
-    return render_template('response2.html', result2 = re * 1.60934)
+    return render_template('response2.html', result2 = re2 * 1.60934)
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
