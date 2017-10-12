@@ -21,7 +21,7 @@ def render_page3():
 @app.route("/response")
 def render_response():
     re = float(request.args['feet']):
-    return render_template('response.html', result = re * 0.3048)
+    return render_template('response.html', result = re * 1)
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
